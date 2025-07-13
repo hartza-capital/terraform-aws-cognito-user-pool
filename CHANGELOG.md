@@ -5,6 +5,49 @@
 
 * support user pool tier option ([#199](https://github.com/lgallard/terraform-aws-cognito-user-pool/issues/199)) ([82fa069](https://github.com/lgallard/terraform-aws-cognito-user-pool/commit/82fa0695bcafe584e1cc317dd6cf9529e9872677))
 
+## [2.0.0](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/compare/1.1.0...2.0.0) (2025-07-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* User group resource addresses have changed from count-based to for_each-based identifiers. Existing deployments require manual state migration to avoid resource recreation.
+
+### Features
+
+* add email MFA configuration example ([#172](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/172)) ([ef76df1](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/ef76df1091dd2851ef7b1eedd88812a8655687ab))
+* add email_mfa_configuration parameter ([#171](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/171)) ([bab6e9e](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/bab6e9ee0b2612d04480824aa82fae0da61a5b1f))
+* add password history size on password policy ([9eb2aee](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/9eb2aeec9f2652a6210b878f82894212576f857f))
+* Add support for custom email_message and email_subject for code verification ([#170](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/170)) ([c6723f4](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/c6723f4856b62dd20edbf49998db7a4391c43791))
+* add support for sign_in_policy configuration ([#210](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/210)) ([86501df](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/86501df69602b8574acb9ec9bca86d7172dfc4bd))
+* add ui customization for clients ([c8300e7](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/c8300e70c7c39a156d996339b1ffe226a4e7f829))
+* add ui customization for clients ([fe8ebe6](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/fe8ebe640a5cbeedced63f8c469449b1f997b942))
+* Fix device_configuration perpetual drift when using explicit false values (release) ([#186](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/186)) ([17cb3ac](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/17cb3accac0bb5c211a128a76c0b8188576b7bf7))
+* identity_providers set to sensitive ([78711f8](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/78711f8f5d9b87b4ffe6adec2d6048a6a75fdad7))
+* Implement release-please for automated versioning without "v" prefix ([#178](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/178)) ([820145d](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/820145de397e36f369c3d03dc5db6b8c3fae0382))
+* support user pool tier option ([#199](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/199)) ([82fa069](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/82fa0695bcafe584e1cc317dd6cf9529e9872677))
+* **terraform:** make code formatting work with terraform &gt;= 0.14 ([5f0eb5a](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/5f0eb5ad407aa340366005a146026fd5ee8a2f22))
+* **terraform:** make code formatting work with terraform &gt;= 0.14 ([610459f](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/610459f402549302833c28d8ba49d4cb5f3c83db))
+* **terraform:** make code formatting work with terraform &gt;= 0.14 ([15a319a](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/15a319ae52c8a18fe524c397581ef845077faa31))
+* update defaults variables and readme file ([b0bc935](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/b0bc93558c38aa45e98405e1b8f2ef4763cc7603))
+
+
+### Bug Fixes
+
+* `client_prevent_user_existence_errors` default value is invalid ([b6a48b7](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/b6a48b780045aa75cadb56927c62cf25cca1ffd0))
+* Add comprehensive release-please configuration to prevent "v" prefix in release titles ([#193](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/193)) ([1b13b71](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/1b13b717d22670d5d435de2fdf3495aaf183d05c))
+* default value is invalid ([d32bb25](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/d32bb250be5e1de41abe436e67746e5991920a65))
+* Fix email_configuration documentation to show all available attributes ([#181](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/181)) ([c0c441e](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/c0c441e469fd4e08ab418919f7ca1263b57dcb5e))
+* lambda customization config not working ([126e7b1](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/126e7b14bc995f2838259408f40ca2190b65948b))
+* lambda customization config not working ([f7f3326](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/f7f3326c067585dc5522f95b074a69e1f3639d38))
+* make sure attribute_constraints are created for string and number schemas ([67612df](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/67612df52f44795b198835544df588373239313b))
+* Remove "v" prefix from release-please release titles ([#189](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/189)) ([f703982](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/f703982bec73743b73b86d30f0902d0e426f4b1a))
+* resolve schema perpetual diff issue with ignore_schema_changes variable ([#195](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/195)) ([896a22b](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/896a22b9c1061084769b067f474daada079bc287))
+* resolve unsupported attribute error for user_groups_map ARN ([#206](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/206)) ([9d5a08d](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/9d5a08d1dfb40b18a0094f3585f8df2888ec19ee)), closes [#205](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/205)
+* SAML identity provider drift by ignoring AWS-managed ActiveEncryptionCertificate ([#176](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/176)) ([539a7db](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/539a7dbfefb73b71e39769361a9447e9be8be0c6))
+* support pre token customization lambda V2 ([b7b373a](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/b7b373a03d1b6c1140e6630e2d8a4c0e27124a77))
+* support pre token lambda V2 ([ea67f4b](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/ea67f4bfed6465c38f52778b50e82f14ed344dc3))
+* switch user groups from count to for_each to prevent unintended deletion ([#202](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/issues/202)) ([1bc67f6](https://github.com/hartza-capital/terraform-aws-cognito-user-pool/commit/1bc67f63c42b95b595f51fab5e473e74e89f3f4b))
+
 ## [1.1.0](https://github.com/lgallard/terraform-aws-cognito-user-pool/compare/1.0.1...1.1.0) (2025-07-10)
 
 
